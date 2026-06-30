@@ -1,0 +1,47 @@
+[
+  {
+    "lab": "Qwen2.5-Coder 32B abliterated",
+    "score": 0.904,
+    "n": 13
+  },
+  {
+    "lab": "Cogito 8B",
+    "score": 0.827,
+    "n": 13
+  },
+  {
+    "lab": "Llama-3.3 70B abliterated",
+    "score": 0.827,
+    "n": 13
+  },
+  {
+    "lab": "Gemma4 12B",
+    "score": 0.769,
+    "n": 13
+  },
+  {
+    "lab": "Gemma4 31B",
+    "score": 0.769,
+    "n": 13
+  },
+  {
+    "lab": "Qwen3.6 35B (MoE)",
+    "score": 0.769,
+    "n": 13
+  },
+  {
+    "lab": "Qwen2.5-Coder 14B",
+    "score": 0.731,
+    "n": 13
+  },
+  {
+    "lab": "Qwen2.5 3B (default)",
+    "score": 0.615,
+    "n": 13
+  },
+  {
+    "lab": "DeepSeek-Coder-V2 16B",
+    "score": 0.564,
+    "n": 13
+  }
+]

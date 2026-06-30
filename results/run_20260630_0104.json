@@ -1,0 +1,16 @@
+{
+  "started": "2026-06-30 01:04:49.888104",
+  "deadline": "2026-06-30 06:45:00",
+  "models": [
+    "qwen2.5:3b",
+    "cogito:8b",
+    "gemma4:12b",
+    "qwen2.5-coder:14b",
+    "deepseek-coder-v2:16b",
+    "gemma4:31b",
+    "qwen3.6:35b",
+    "hf.co/bartowski/Qwen2.5-Coder-32B-Instruct-abliterated-GGUF:Q4_K_M",
+    "hf.co/mradermacher/Llama-3.3-70B-Instruct-abliterated-GGUF:Q3_K_M"
+  ],
+  "n_tasks": 13
+}

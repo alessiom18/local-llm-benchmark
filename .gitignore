@@ -3,3 +3,13 @@ __pycache__/
 results/*.log
 results/chain*.sh
 results/live_server.log
+results/master.log
+results/variants.log
+results/sites.log
+results/finalize.log
+results/pipe.log
+results/night.log
+results/*.sh
+results/results_variants_20260630_0726.jsonl
+results/run_variants_20260630_0726.json
+run_sites_clean.py

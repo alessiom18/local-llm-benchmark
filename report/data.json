@@ -1,0 +1,187 @@
+{
+  "source": "results_20260630_0104.jsonl",
+  "models": [
+    {
+      "model": "qwen2.5:3b",
+      "lab": "Qwen2.5 3B (default)",
+      "tier": "light",
+      "quality": 1.0,
+      "pass_rate": 1.0,
+      "tok_s": 115.62,
+      "n": 13
+    },
+    {
+      "model": "cogito:8b",
+      "lab": "Cogito 8B",
+      "tier": "light",
+      "quality": 1.0,
+      "pass_rate": 1.0,
+      "tok_s": 61.621,
+      "n": 13
+    },
+    {
+      "model": "hf.co/bartowski/Qwen2.5-Coder-32B-Instruct-abliterated-GGUF:Q4_K_M",
+      "lab": "Qwen2.5-Coder 32B abliterated",
+      "tier": "heavy",
+      "quality": 1.0,
+      "pass_rate": 1.0,
+      "tok_s": 3.182,
+      "n": 13
+    },
+    {
+      "model": "hf.co/mradermacher/Llama-3.3-70B-Instruct-abliterated-GGUF:Q3_K_M",
+      "lab": "Llama-3.3 70B abliterated",
+      "tier": "heavy",
+      "quality": 1.0,
+      "pass_rate": 1.0,
+      "tok_s": 1.029,
+      "n": 11
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "lab": "Qwen2.5-Coder 14B",
+      "tier": "light",
+      "quality": 0.987,
+      "pass_rate": 1.0,
+      "tok_s": 21.804,
+      "n": 13
+    },
+    {
+      "model": "deepseek-coder-v2:16b",
+      "lab": "DeepSeek-Coder-V2 16B",
+      "tier": "light",
+      "quality": 0.948,
+      "pass_rate": 0.92,
+      "tok_s": 73.25,
+      "n": 13
+    },
+    {
+      "model": "gemma4:12b",
+      "lab": "Gemma4 12B",
+      "tier": "light",
+      "quality": 0.93,
+      "pass_rate": 0.77,
+      "tok_s": 35.399,
+      "n": 13
+    },
+    {
+      "model": "qwen3.6:35b",
+      "lab": "Qwen3.6 35B (MoE)",
+      "tier": "heavy",
+      "quality": 0.911,
+      "pass_rate": 0.77,
+      "tok_s": 30.898,
+      "n": 13
+    },
+    {
+      "model": "gemma4:31b",
+      "lab": "Gemma4 31B",
+      "tier": "heavy",
+      "quality": 0.881,
+      "pass_rate": 0.77,
+      "tok_s": 2.665,
+      "n": 13
+    }
+  ],
+  "categories": [
+    "classify",
+    "code",
+    "config",
+    "copy",
+    "extract",
+    "recipe",
+    "strategy",
+    "website"
+  ],
+  "by_model_cat": {
+    "qwen2.5:3b": {
+      "classify": 1.0,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 1.0,
+      "copy": 1.0,
+      "website": 1.0
+    },
+    "cogito:8b": {
+      "classify": 1.0,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 1.0,
+      "copy": 1.0,
+      "website": 1.0
+    },
+    "gemma4:12b": {
+      "classify": 1.0,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 1.0,
+      "copy": 0.43,
+      "website": 0.83
+    },
+    "qwen2.5-coder:14b": {
+      "classify": 1.0,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 1.0,
+      "copy": 1.0,
+      "website": 0.915
+    },
+    "deepseek-coder-v2:16b": {
+      "classify": 0.665,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 1.0,
+      "copy": 1.0,
+      "website": 1.0
+    },
+    "gemma4:31b": {
+      "classify": 1.0,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 1.0,
+      "copy": 0.45,
+      "website": 0.5
+    },
+    "qwen3.6:35b": {
+      "classify": 1.0,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 0.835,
+      "copy": 1.0,
+      "website": 0.585
+    },
+    "hf.co/bartowski/Qwen2.5-Coder-32B-Instruct-abliterated-GGUF:Q4_K_M": {
+      "classify": 1.0,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 1.0,
+      "copy": 1.0,
+      "website": 1.0
+    },
+    "hf.co/mradermacher/Llama-3.3-70B-Instruct-abliterated-GGUF:Q3_K_M": {
+      "classify": 1.0,
+      "extract": 1.0,
+      "config": 1.0,
+      "strategy": 1.0,
+      "recipe": 1.0,
+      "code": 1.0,
+      "copy": 1.0
+    }
+  }
+}
