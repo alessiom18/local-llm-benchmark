@@ -11,6 +11,7 @@ classificare richieste, estrarre menù, scrivere/rivedere codice, generare siti,
 1. [Non esiste il modello migliore](ARTICOLO.md) — la classifica (decine di modelli, piccolo batte grande)
 2. [I benchmark mentono](docs/02-i-benchmark-mentono.md) — il metodo (perché i test ingenui ingannano)
 3. [Fondere i modelli + la flotta](docs/03-fusione-e-flotta.md) — gli esperimenti (fusione onesta, due PC che collaborano)
+4. [Anche le AI credono che grande=meglio](docs/04-i-bias-delle-ai.md) — i bias (autolavaggio + la squadra)
 
 ## Perché
 Le classifiche online sono fatte su benchmark accademici lontani dal lavoro vero, e spesso premiano la *forma*
