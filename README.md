@@ -5,6 +5,7 @@ reali di un gestionale ([SmartShop](https://smartshop.sudowai.com) di [SudoWAI](
 classificare richieste, estrarre menù, scrivere/rivedere codice, generare siti, dare consigli.
 
 👉 **Articolo completo e risultati:** [ARTICOLO.md](ARTICOLO.md)
+\n🌐 **Leggi la ricerca sul nostro sito:** [sudowai.com/ricerca-ai](https://sudowai.com/ricerca-ai)
 
 
 ## La ricerca in 3 parti
