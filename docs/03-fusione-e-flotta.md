@@ -23,9 +23,19 @@ Qui la ricerca aperta mostra il suo valore: **pubblichiamo anche i fallimenti.**
 
 Indagando, la causa non era l'idea, ma gli **strumenti troppo "di frontiera"**: alcune librerie all'ultimissima versione calcolavano la fusione in modo errato. La lezione, spesso taciuta nei post entusiasti: **fondere i modelli non è magia gratis.** Serve la ricetta giusta *e* strumenti stabili, altrimenti si rompe ciò che funzionava.
 
-Abbiamo riprovato anche con **librerie in versione stabile**: e la fusione **si è rotta di nuovo**. Segno che il problema è più profondo — la nostra ipotesi attuale è un **disallineamento dei "vocabolari"** tra i due modelli di partenza (parlano la stessa lingua ma con dizionari leggermente diversi, e mescolarli confonde il risultato). È un **problema aperto**, e lo lasciamo scritto così com'è: la prossima volta proveremo a fondere modelli con lo **stesso identico dizionario** (per esempio due varianti dello stesso modello base), dove la fusione ha molte più probabilità di riuscire.
+Indagando abbiamo capito: il problema era il **"vocabolario"**. I due modelli che stavamo fondendo (uno generalista, uno specializzato nel codice) parlavano la stessa lingua ma con **dizionari leggermente diversi** — e mescolarli mandava in confusione il risultato.
 
-Nessun titolo trionfale, quindi. Ma è proprio questo il punto: **una ricerca seria si giudica anche da come racconta ciò che non è filato liscio.** Chi ti promette solo successi, di solito, non ha mai davvero provato.
+## E poi ha funzionato
+Corretto il tiro — fondendo due modelli con lo **stesso identico dizionario** (un modello e una sua variante) — **la fusione è riuscita**. Il modello fuso risponde in modo pulito e corretto. Alla domanda *"cos'è un gestionale per un negozio?"*:
+
+> *"Un gestionale per un negozio è un sistema informativo che permette di gestire i processi amministrativi e commerciali, come l'inventario, le vendite, i pagamenti e la contabilità."*
+
+E possiamo perfino **vedere le sinapsi**: questa mappa mostra, per ogni strato del cervello fuso, a quale modello-genitore somiglia di più. Non è un disegno — è calcolata dai pesi reali.
+
+![Mappa sinaptica del modello fuso](../report/synapse_ablit.png)
+
+## La lezione
+Fondere i modelli **si può fare** — ma non a caso: serve la **ricetta giusta** (stesso vocabolario) e **strumenti stabili**. La differenza tra un post entusiasta e una ricerca seria è tutta qui: noi ve l'abbiamo raccontata **con il fallimento e poi con il successo**, dati alla mano. Chi ti promette solo trionfi, di solito, non ha mai davvero provato.
 
 ## Perché conta per te (che hai un'attività)
 Non ti servono i dettagli tecnici. Ti serve sapere una cosa: **noi non vendiamo fumo.** Proviamo, misuriamo, sbagliamo, correggiamo — e mettiamo tutto in chiaro, dati e codice. È la stessa serietà con cui costruiamo **SmartShop** e gli assistenti che girano **in locale**, con i tuoi dati che restano a casa tua.
