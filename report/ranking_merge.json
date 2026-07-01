@@ -1,0 +1,27 @@
+[
+  {
+    "lab": "Qwen2.5 7B Instruct (genitore)",
+    "score": 0.635,
+    "n": 13
+  },
+  {
+    "lab": "Qwen2.5-Coder 7B (genitore)",
+    "score": 0.571,
+    "n": 13
+  },
+  {
+    "lab": "Qwen 7B DARE-TIES (4 fusi)",
+    "score": 0.0,
+    "n": 13
+  },
+  {
+    "lab": "Qwen 7B TIES (4 fusi)",
+    "score": 0.0,
+    "n": 13
+  },
+  {
+    "lab": "Qwen 7B SLERP (instruct+coder)",
+    "score": 0.0,
+    "n": 13
+  }
+]

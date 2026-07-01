@@ -1,0 +1,47 @@
+[
+  {
+    "lab": "Phi-4 14B @NITRO",
+    "score": 0.788,
+    "n": 13
+  },
+  {
+    "lab": "Nemotron-Cascade2 24B @NITRO",
+    "score": 0.75,
+    "n": 13
+  },
+  {
+    "lab": "Qwen2.5 14B abliterated @NITRO",
+    "score": 0.731,
+    "n": 13
+  },
+  {
+    "lab": "Gemma4 26B @NITRO",
+    "score": 0.692,
+    "n": 13
+  },
+  {
+    "lab": "Qwen2.5-Coder 14B @NITRO",
+    "score": 0.692,
+    "n": 13
+  },
+  {
+    "lab": "Gemma2 9B @NITRO",
+    "score": 0.692,
+    "n": 13
+  },
+  {
+    "lab": "Mistral-Nemo 12B @NITRO",
+    "score": 0.685,
+    "n": 13
+  },
+  {
+    "lab": "DeepSeek-R1 14B @NITRO",
+    "score": 0.654,
+    "n": 13
+  },
+  {
+    "lab": "Llama3.1 8B @NITRO",
+    "score": 0.5,
+    "n": 13
+  }
+]

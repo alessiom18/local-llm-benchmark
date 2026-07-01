@@ -86,6 +86,38 @@ E lo conferma il mercato: persino **OpenAI ha chiuso Sora** perché la generazio
 
 ---
 
+## Aggiornamento — la ricerca si allarga (più modelli, più macchine)
+Per non fermarci a un solo computer, abbiamo esteso le prove a **più famiglie di modelli** e le abbiamo fatte girare anche su un **secondo nodo locale più potente** (una scheda video di fascia superiore), collegato in modo sicuro alla nostra rete — un primo esempio concreto di **"flotta": più macchine che collaborano** invece di un unico server.
+
+Modelli/famiglie aggiunti e misurati (velocità reale sul secondo nodo):
+
+| Modello (famiglia) | Velocità |
+|---|---|
+| Llama 3.1 8B | ~52 tok/s |
+| Gemma 2 9B | ~23 tok/s |
+| Gemma4 26B | ~23 tok/s |
+| Mistral-Nemo 12B | ~16 tok/s |
+| Nemotron 24B | ~12 tok/s |
+| DeepSeek-R1 14B · Phi-4 14B | ~8 tok/s |
+
+Questo copre le principali "scuole" di modelli aperti (Meta, Google, Mistral, Microsoft, Nvidia, DeepSeek, Alibaba/Qwen). E la **classifica di qualità estesa** (giudicata alla cieca) conferma tutto:
+
+| # | Modello | Qualità (0–1) |
+|---|---------|---------------|
+| 1 | **Phi-4 14B** (Microsoft) | **0.79** |
+| 2 | Nemotron 24B (Nvidia) | 0.75 |
+| 3 | Qwen 14B *abliterated* | 0.73 |
+| 4 | Gemma 26B · Qwen-Coder 14B · Gemma 2 9B · Mistral-Nemo 12B | 0.69 |
+| 8 | DeepSeek-R1 14B | 0.65 |
+| 9 | Llama 3.1 8B | 0.50 |
+
+**Il dato che chiude il discorso:** vince un **14B (Phi-4)**, davanti ai 24-26B. Sommato al primo test (dove un 12B pareggiava un 31B), la conclusione regge ormai su **una dozzina di modelli e sette famiglie diverse**: *la taglia non fa la qualità.*
+
+## Esperimento — fondere i modelli ("dare nuove abilità")
+Abbiamo anche provato a **fondere** più modelli specializzati in uno solo (SLERP, TIES, DARE, frankenmerge) — l'equivalente di dare a un modello le abilità di più esperti. Risultato onesto: **su questo primo tentativo la fusione è degenerata** (i modelli fusi producevano testo incomprensibile, mentre i "genitori" funzionavano bene). Una lezione importante, spesso taciuta: **fondere i modelli non è magia gratis** — serve la ricetta giusta e strumenti stabili, altrimenti si rompe ciò che funzionava. È un lavoro in corso: lo rifaremo con un metodo più solido e lo racconteremo coi numeri, buoni o cattivi che siano. *(È anche il senso della ricerca aperta: pubblichiamo pure ciò che non ha funzionato.)*
+
+---
+
 ## Riproducibilità
 Tutto il codice è in questo repository: i 13 compiti (`tasks.py`), il runner (`run_bench.py`), la rigenerazione senza troncamenti (`run_open_clean.py`), le varianti thinking/caveman (`run_variants.py`), il giudice cieco (`judge.py`), i grafici (`make_charts.py`) e **tutti i dati grezzi** (`results/`). Chiunque può rifare i test sul proprio hardware.
 
