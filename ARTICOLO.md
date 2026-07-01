@@ -1,12 +1,13 @@
 # Non esiste "il modello migliore"
-### 9 modelli di AI in locale, su hardware da retrobottega, sui compiti veri di un gestionale
+### Decine di modelli di AI in locale, su hardware da retrobottega, sui compiti veri di un gestionale
 
 *Di [SudoWAI](https://sudowai.com) — software e AI in locale, senza Big Tech · Livorno.*
+*Ricerca in 3 parti: **1) la classifica** (qui) · [2) i benchmark mentono](docs/02-i-benchmark-mentono.md) · [3) fondere i modelli + la flotta](docs/03-fusione-e-flotta.md).*
 
 ---
 
 ## In due righe
-Abbiamo messo alla prova **9 modelli di intelligenza artificiale interamente in locale** (nessun cloud) sui compiti reali del nostro gestionale **SmartShop**. Conclusione netta e contro-intuitiva: **non vince sempre lo stesso modello, e il più grosso non è il migliore.** Un modello "piccolo" da 12 miliardi di parametri ha **eguagliato uno quasi tre volte più grande, andando ~13× più veloce** — battendo perfino un modello da 70 miliardi.
+Abbiamo messo alla prova **decine di modelli di intelligenza artificiale** (tra originali, varianti e fusioni), **interamente in locale** (nessun cloud), sui compiti reali del nostro gestionale **SmartShop**. Conclusione netta e contro-intuitiva: **non vince sempre lo stesso modello, e il più grosso non è il migliore.** Un modello "piccolo" da 12 miliardi di parametri ha **eguagliato uno quasi tre volte più grande, andando ~13× più veloce** — battendo perfino un modello da 70 miliardi. E nel test esteso su sette famiglie ha vinto un **14B (Phi-4)**, davanti ai 24-26B.
 
 ## Hardware
 **RTX 3060 12GB + 31GB di RAM.** Niente di esotico: il tipo di macchina che può stare nel retro di un negozio. Tutto in locale, dati che non escono di casa.

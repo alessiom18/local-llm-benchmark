@@ -6,6 +6,12 @@ classificare richieste, estrarre menù, scrivere/rivedere codice, generare siti,
 
 👉 **Articolo completo e risultati:** [ARTICOLO.md](ARTICOLO.md)
 
+
+## La ricerca in 3 parti
+1. [Non esiste il modello migliore](ARTICOLO.md) — la classifica (decine di modelli, piccolo batte grande)
+2. [I benchmark mentono](docs/02-i-benchmark-mentono.md) — il metodo (perché i test ingenui ingannano)
+3. [Fondere i modelli + la flotta](docs/03-fusione-e-flotta.md) — gli esperimenti (fusione onesta, due PC che collaborano)
+
 ## Perché
 Le classifiche online sono fatte su benchmark accademici lontani dal lavoro vero, e spesso premiano la *forma*
 non la *sostanza*. Qui i compiti sono reali e la qualità è valutata da un **giudice LLM cieco** (con riprova del
