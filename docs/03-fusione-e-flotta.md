@@ -23,7 +23,9 @@ Qui la ricerca aperta mostra il suo valore: **pubblichiamo anche i fallimenti.**
 
 Indagando, la causa non era l'idea, ma gli **strumenti troppo "di frontiera"**: alcune librerie all'ultimissima versione calcolavano la fusione in modo errato. La lezione, spesso taciuta nei post entusiasti: **fondere i modelli non è magia gratis.** Serve la ricetta giusta *e* strumenti stabili, altrimenti si rompe ciò che funzionava.
 
-**Stiamo rifacendo la fusione con strumenti stabili** (una versione precedente e più solida delle librerie). Aggiorneremo questa pagina con l'esito — funzioni o no — e con la **"mappa delle sinapsi"**: un'immagine che mostra, per ogni parte del cervello fuso, da quale modello-specialista proviene. Perché una ricerca seria si giudica anche da come racconta ciò che non è filato liscio.
+Abbiamo riprovato anche con **librerie in versione stabile**: e la fusione **si è rotta di nuovo**. Segno che il problema è più profondo — la nostra ipotesi attuale è un **disallineamento dei "vocabolari"** tra i due modelli di partenza (parlano la stessa lingua ma con dizionari leggermente diversi, e mescolarli confonde il risultato). È un **problema aperto**, e lo lasciamo scritto così com'è: la prossima volta proveremo a fondere modelli con lo **stesso identico dizionario** (per esempio due varianti dello stesso modello base), dove la fusione ha molte più probabilità di riuscire.
+
+Nessun titolo trionfale, quindi. Ma è proprio questo il punto: **una ricerca seria si giudica anche da come racconta ciò che non è filato liscio.** Chi ti promette solo successi, di solito, non ha mai davvero provato.
 
 ## Perché conta per te (che hai un'attività)
 Non ti servono i dettagli tecnici. Ti serve sapere una cosa: **noi non vendiamo fumo.** Proviamo, misuriamo, sbagliamo, correggiamo — e mettiamo tutto in chiaro, dati e codice. È la stessa serietà con cui costruiamo **SmartShop** e gli assistenti che girano **in locale**, con i tuoi dati che restano a casa tua.
