@@ -13,6 +13,7 @@ classificare richieste, estrarre menù, scrivere/rivedere codice, generare siti,
 2. [I benchmark mentono](docs/02-i-benchmark-mentono.md) — il metodo (perché i test ingenui ingannano)
 3. [Fondere i modelli + la flotta](docs/03-fusione-e-flotta.md) — gli esperimenti (fusione onesta, due PC che collaborano)
 4. [Anche le AI credono che grande=meglio](docs/04-i-bias-delle-ai.md) — i bias (autolavaggio + la squadra)
+5. [Quanto conviene fidarsi dell'AI?](docs/05-quanto-conviene-fidarsi.md) — editoriale: benchmark fasulli, dipendenza, riflessioni (niente allarmismo)
 
 ## Perché
 Le classifiche online sono fatte su benchmark accademici lontani dal lavoro vero, e spesso premiano la *forma*
