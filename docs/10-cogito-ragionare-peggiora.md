@@ -18,6 +18,20 @@ In un altro nostro test abbiamo chiesto a decine di modelli di parlarci di cose 
 ## Perché succede
 Il "ragionamento" non è pensiero vero: è il modello che **genera altro testo** prima della risposta. Se la direzione è giusta, aiuta. Se la premessa è sbagliata (o il compito è secco e numerico), quel testo in più diventa **un modo elaborato per allontanarsi dalla risposta corretta** — o per giustificare una premessa falsa.
 
+## La prova sperimentale (thinking ON vs OFF)
+L'abbiamo misurato di proposito: gli stessi modelli, sugli stessi compiti concreti, con il ragionamento **acceso** e **spento**. Il risultato è netto — **spento vince sempre**:
+
+| Modello | Ragionamento ON | Ragionamento OFF |
+|---|---|---|
+| Cogito 8B | 90% | **100%** |
+| Gemma 12B | 70% | **90%** |
+| Gemma 31B | 59% | **96%** |
+| Qwen 35B | **18%** | **94%** |
+
+Il caso Qwen è impressionante: dal **94% al 18%** solo accendendo il ragionamento. Più il modello "pensa", più si perde.
+
+![Thinking on vs off](../report/chart_thinking.png)
+
 ## Quando conviene, allora?
 Non stiamo dicendo che il ragionamento è inutile. Nei nostri test **aiuta** su un solo tipo di compito: quello **aperto e creativo** (una strategia, un'idea originale). Lì fa la differenza — anzi, senza ragionamento tutti i modelli proponevano la stessa cosa ovvia, e solo quelli "che pensano" divergevano.
 
