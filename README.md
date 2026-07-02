@@ -15,6 +15,9 @@ classificare richieste, estrarre menù, scrivere/rivedere codice, generare siti,
 4. [Anche le AI credono che grande=meglio](docs/04-i-bias-delle-ai.md) — i bias (autolavaggio + la squadra)
 5. [Quanto conviene fidarsi dell'AI?](docs/05-quanto-conviene-fidarsi.md) — editoriale: benchmark fasulli, dipendenza, riflessioni (niente allarmismo)
 6. [Come si comportano le AI messe alla prova](docs/06-mega-report-comportamento.md) — mega-report: sicurezza, etica, bias, lungimiranza (1214 risposte, 35 modelli)
+7. [Quale modello per cosa](docs/07-quale-modello-per-cosa.md) — guida pratica: il modello giusto per ogni compito, chi sostituisce chi
+8. [Il modello che crede di essere ChatGPT](docs/08-crede-di-essere-chatgpt.md) — la finta diversità dell'AI open (distillazione)
+9. [Se corre pure Apple](docs/09-se-corre-apple.md) — commento cybersecurity + AI (Sole 24 Ore)
 
 ## Perché
 Le classifiche online sono fatte su benchmark accademici lontani dal lavoro vero, e spesso premiano la *forma*
