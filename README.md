@@ -18,6 +18,8 @@ classificare richieste, estrarre menù, scrivere/rivedere codice, generare siti,
 7. [Quale modello per cosa](docs/07-quale-modello-per-cosa.md) — guida pratica: il modello giusto per ogni compito, chi sostituisce chi
 8. [Il modello che crede di essere ChatGPT](docs/08-crede-di-essere-chatgpt.md) — la finta diversità dell'AI open (distillazione)
 9. [Se corre pure Apple](docs/09-se-corre-apple.md) — commento cybersecurity + AI (Sole 24 Ore)
+10. [Cogito, ergo sbaglio?](docs/10-cogito-ragionare-peggiora.md) — quando "far ragionare" un'AI la peggiora
+11. [Fantasia sì, ma non sui fatti](docs/11-fantasia-si-ma-non-sui-fatti.md) — il test delle allucinazioni: metà dei modelli inventa cose inesistenti
 
 ## Perché
 Le classifiche online sono fatte su benchmark accademici lontani dal lavoro vero, e spesso premiano la *forma*
