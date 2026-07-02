@@ -28,4 +28,7 @@ Il modello propone. **A confermare i fatti, però, devi restare tu.** Perché co
 
 È il motivo per cui, in **SmartShop**, per i dati che contano scegliamo il modello più prudente — non il più fantasioso — e teniamo l'essere umano nella cabina di comando.
 
+## Attenzione: «indipendente» non vuol dire «affidabile sui fatti»
+Lo abbiamo verificato su **OLMo 2**, il modello a **dati aperti** (che, a differenza di altri, sa perfino di essere OLMo e non si spaccia per ChatGPT). Ebbene: sulle sei cose inventate ha **allucinato lo stesso**. Lezione da non confondere: avere un **lignaggio pulito** è un pregio per l'indipendenza, ma **non rende un modello immune dalle invenzioni**. Sono due problemi diversi, e su entrambi la regola resta: verifica i fatti.
+
 *Dati e codice: [github.com/alessiom18/local-llm-benchmark](https://github.com/alessiom18/local-llm-benchmark) · [sudowai.com/ricerca-ai](https://sudowai.com/ricerca-ai) · SudoWAI, Livorno.*

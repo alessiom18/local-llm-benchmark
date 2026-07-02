@@ -27,4 +27,7 @@ Qui sta il punto che ci sta più a cuore. Molti scelgono un modello "open" e loc
 
 La vera indipendenza non è solo *dove gira* il modello — è **da dove ha imparato.** Per questo, quando scegliamo cosa mettere sotto **SmartShop**, non guardiamo solo le prestazioni: guardiamo **la provenienza**, e sappiamo *cosa* stiamo usando e *di chi è figlio*. Perché "in locale" è metà del lavoro. L'altra metà è **sapere di chi ti fidi.**
 
+## Controprova: il modello a dati aperti sa chi è
+Abbiamo testato **OLMo 2**, un modello con i **dati di addestramento completamente aperti** (di AllenAI). Alla stessa domanda ha risposto con onestà: *"sono OLMo 2, creato da AllenAI"*. Nessuna confusione, nessun "sono ChatGPT". È la controprova: quando la provenienza è pulita, **la contaminazione identitaria sparisce**. Non è un caso — è da dove ha imparato.
+
 *Dati e codice: [github.com/alessiom18/local-llm-benchmark](https://github.com/alessiom18/local-llm-benchmark) · [sudowai.com/ricerca-ai](https://sudowai.com/ricerca-ai) · SudoWAI, Livorno.*
