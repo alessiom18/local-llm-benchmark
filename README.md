@@ -7,6 +7,8 @@ classificare richieste, estrarre menù, scrivere/rivedere codice, generare siti,
 👉 **Articolo completo e risultati:** [ARTICOLO.md](ARTICOLO.md)
 \n🌐 **Leggi la ricerca sul nostro sito:** [sudowai.com/ricerca-ai](https://sudowai.com/ricerca-ai)
 
+> 🔒 **Perché il locale, oltre che "funziona", conta:** [Sovranità digitale — GDPR vs Chat Control](https://github.com/alessiom18/sovranita-digitale). Il locale non è solo abbastanza buono: tiene i tuoi dati a casa tua.
+
 
 ## La ricerca in 3 parti
 1. [Non esiste il modello migliore](ARTICOLO.md) — la classifica (decine di modelli, piccolo batte grande)
