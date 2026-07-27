@@ -159,7 +159,7 @@ def main():
 
     # carica prompt originali dei task
     sys.path.insert(0, HERE)
-    from bench_realworld import REAL_TASKS
+    from tasks_realworld import REAL_TASKS
     PROMPTS = {t['id']: t['prompt'] for t in REAL_TASKS}
 
     rows = [json.loads(l) for l in open(path, encoding='utf-8') if l.strip()]
