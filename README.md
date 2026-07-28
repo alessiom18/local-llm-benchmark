@@ -30,6 +30,24 @@ Le classifiche online sono fatte su benchmark accademici lontani dal lavoro vero
 non la *sostanza*. Qui i compiti sono reali e la qualità è valutata da un **giudice LLM cieco** (con riprova del
 modello vincente + verifica umana a campione), non solo da check automatici.
 
+## Benchmark v2 — Senza Penalità Troncamento (2026-07-27)
+**Problema:** il primo giudice penalizzava modelli che scrivono di più (risposte troncate dal limite token).
+**Soluzione:** rubrica adattata che valuta solo correttezza di quello che c'è, num_predict raddoppiati (fino a 4000).
+
+**Classifica v2 (gemma4:12b, 40 modelli × 10 task = 400 valutazioni):**
+
+| # | Modello | Score | Tempo | Note |
+|---|---------|-------|-------|------|
+| 1 | nemotron-cascade-2:30b-a3b-q4_K_M | **0.900** | 33s | Era punito per troncamento |
+| 2 | qwen3.5:latest | **0.825** | 19s | Ottimo compromesso |
+| 3 | gemma4:12b | **0.800** | 23s | Confermata solida |
+| 4 | qwen3.6:35b | 0.775 | 29s | |
+| 5 | gemma4:26b | 0.775 | 30s | |
+
+**Key finding:** il giudice precedente dava risultati completamente diversi — il troncamento era un confound mascherava i modelli che scrivono bene.
+
+👉 **Report completo:** [results/REPORT_V2_20260727_2221.md](results/REPORT_V2_20260727_2221.md)
+
 ## Hardware di riferimento
 RTX 3060 12GB + 31GB RAM — hardware "da retrobottega", niente cloud.
 
