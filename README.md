@@ -24,6 +24,7 @@ classificare richieste, estrarre menù, scrivere/rivedere codice, generare siti,
 11. [Fantasia sì, ma non sui fatti](docs/11-fantasia-si-ma-non-sui-fatti.md) — il test delle allucinazioni: metà dei modelli inventa cose inesistenti
 12. [Il guard-rail si aggira](docs/12-il-guardrail-si-aggira.md) — red-teaming: travestire la richiesta erode il freno (diretto 14% vs travestito 21%); Gemma il più solido
 13. [Inception: quanti livelli per far cedere un'AI](docs/13-inception-quanti-livelli.md) — segreto finto: 28/36 modelli cedono subito, 5 reggono tutti i livelli (gemma tra questi)
+14. [Togliere il freno a un'AI le fa perdere il metodo](docs/14-abliterated-perde-il-mebc.md) — un modello *abliterated* ragiona uguale da solo (0,939 vs 0,922; stessi tok/s) ma **non guadagna più niente dal MEBC**: 70% contro 86,7%, tre giri su tre
 
 ## Perché
 Le classifiche online sono fatte su benchmark accademici lontani dal lavoro vero, e spesso premiano la *forma*

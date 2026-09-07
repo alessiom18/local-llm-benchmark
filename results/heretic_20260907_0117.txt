@@ -1,0 +1,14 @@
+
+==========================================================================
+MACCHINA · MODELLO                            NUDO    MEBC       Δ
+==========================================================================
+MARCO · gemma4:12b                             70%     90%    +20%
+MARCO* · gemma4-heretic:12b                    70%     70%     +0%
+==========================================================================
+
+per categoria di prova:
+                               MARCO n/m      MARCO* n/m
+codice                     2/3 su 3        2/3 su 3     
+codice_duro                2/2 su 2        2/2 su 2     
+multistep                  1/2 su 3        1/0 su 3     
+ragionamento               2/2 su 2        2/2 su 2     

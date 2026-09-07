@@ -19,16 +19,27 @@ from tasks import TASKS  # noqa
 OLLAMA = "http://localhost:11434/api/generate"
 
 # Modelli da confrontare. tier 'heavy' = gira su CPU/RAM (lento) → num_predict ridotto e task pesanti capati.
+# LISTA AGGIORNATA (redo 2026-08-07): campioni v2 (nemotron-cascade-2, qwen3.5) + coder agentici nuovi
+# (devstral/codestral/gpt-oss) + tuttofare + big. Solo modelli installati (llama3.3-70b non presente → escluso).
 MODELS = [
-    {'name': 'qwen2.5:3b',                                                         'tier': 'light', 'lab': 'Qwen2.5 3B (default)'},
-    {'name': 'cogito:8b',                                                          'tier': 'light', 'lab': 'Cogito 8B'},
-    {'name': 'gemma4:12b',                                                         'tier': 'light', 'lab': 'Gemma4 12B'},
-    {'name': 'qwen2.5-coder:14b',                                                  'tier': 'light', 'lab': 'Qwen2.5-Coder 14B'},
-    {'name': 'deepseek-coder-v2:16b',                                              'tier': 'light', 'lab': 'DeepSeek-Coder-V2 16B'},
-    {'name': 'gemma4:31b',                                                         'tier': 'heavy', 'lab': 'Gemma4 31B'},
-    {'name': 'qwen3.6:35b',                                                        'tier': 'heavy', 'lab': 'Qwen3.6 35B (MoE)'},
+    # — LEGGERI/veloci (stanno in VRAM, girano per PRIMI: se la deadline taglia, questi sono già fatti) —
+    {'name': 'qwen3.5:latest',                    'tier': 'light', 'lab': 'Qwen3.5'},
+    {'name': 'gemma4:12b',                        'tier': 'light', 'lab': 'Gemma4 12B'},
+    {'name': 'gemma4-heretic:12b',              'tier': 'light', 'lab': 'Gemma4 12B Heretic (ricostruito)'},
+    {'name': 'cogito:8b',                         'tier': 'light', 'lab': 'Cogito 8B'},
+    {'name': 'phi4:latest',                       'tier': 'light', 'lab': 'Phi-4 14B'},
+    {'name': 'qwen-fuso:7b',                      'tier': 'light', 'lab': 'Qwen-Fuso 7B'},
+    {'name': 'deepseek-coder-v2:16b',             'tier': 'light', 'lab': 'DeepSeek-Coder-V2 16B'},
+    {'name': 'qwen2.5-coder:14b',                 'tier': 'light', 'lab': 'Qwen2.5-Coder 14B'},
+    # — coder agentici medi (rilevanti per Oscar) —
+    {'name': 'devstral:24b',                      'tier': 'heavy', 'lab': 'Devstral 24B (agentic)'},
+    {'name': 'codestral:22b',                     'tier': 'heavy', 'lab': 'Codestral 22B'},
+    {'name': 'gpt-oss:20b',                       'tier': 'heavy', 'lab': 'GPT-OSS 20B'},
+    # — PESANTI (per ULTIMI: se la deadline taglia si perdono solo questi) —
+    {'name': 'nemotron-cascade-2:30b-a3b-q4_K_M', 'tier': 'heavy', 'lab': 'Nemotron-Cascade-2 30B-a3b'},
+    {'name': 'gemma4:31b',                        'tier': 'heavy', 'lab': 'Gemma4 31B'},
+    {'name': 'qwen3.6:35b',                       'tier': 'heavy', 'lab': 'Qwen3.6 35B (MoE)'},
     {'name': 'hf.co/bartowski/Qwen2.5-Coder-32B-Instruct-abliterated-GGUF:Q4_K_M', 'tier': 'heavy', 'lab': 'Qwen2.5-Coder 32B abliterated'},
-    {'name': 'hf.co/mradermacher/Llama-3.3-70B-Instruct-abliterated-GGUF:Q3_K_M',  'tier': 'heavy', 'lab': 'Llama-3.3 70B abliterated'},
 ]
 
 def log(*a):
@@ -71,6 +82,31 @@ def unload(model):
     except Exception:
         pass
 
+# ── GUARD GPU: il benchmark CEDE la GPU a Serena (bug-trap #7: contesa GPU → Serena in timeout) ──
+WA_DB = os.getenv('WA_DB', '/mnt/VERO_NVME/serena/wa-bridge/logs/messages.db')
+GUARD_WINDOW_S = int(os.getenv('GUARD_WINDOW_S', '240'))  # cliente scritto negli ultimi N s → Serena ha bisogno della GPU
+
+def serena_busy():
+    """True se un cliente ha scritto di recente → Serena probabilmente sta generando: cediamo la GPU."""
+    try:
+        import sqlite3
+        c = sqlite3.connect(f"file:{WA_DB}?mode=ro", uri=True, timeout=3)
+        row = c.execute("SELECT (julianday('now')-julianday(max(ts)))*86400 FROM messages WHERE direction='in' AND tenant NOT LIKE 'group\\_%' ESCAPE '\\'").fetchone()
+        c.close()
+        return bool(row and row[0] is not None and row[0] < GUARD_WINDOW_S)
+    except Exception:
+        return False
+
+def wait_for_serena(cur_model, deadline):
+    """Se Serena è attiva: scarica il modello del bench (libera VRAM) e aspetta il silenzio, poi riprende."""
+    if not serena_busy():
+        return
+    log(f"[GUARD] Serena attiva (cliente recente) → CEDO la GPU: scarico {cur_model} e aspetto...")
+    unload(cur_model)
+    while serena_busy() and datetime.datetime.now() < deadline:
+        time.sleep(20)
+    log("[GUARD] silenzio tornato → riprendo il benchmark")
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--until', default='06:45', help='ora limite HH:MM')
@@ -110,10 +146,11 @@ def main():
             for t in tasks:
                 if datetime.datetime.now() >= deadline:
                     log("DEADLINE durante il modello, stop."); break
-                # i task pesanti (siti) su modelli heavy = num_predict ridotto per non sforare
-                np = t['np']
-                if m['tier'] == 'heavy' and t['cat'] == 'website':
-                    np = min(np, 1400)
+                wait_for_serena(m['name'], deadline)  # cede la GPU a Serena se un cliente sta scrivendo
+                # REDO "a modo" (2026-08-07): NESSUN limite di token → floor alto uniforme, niente troncamenti
+                # (nemmeno per gli heavy: se sforano la deadline si fermano, ma non vengono penalizzati dal taglio).
+                NP_FLOOR = int(os.getenv('NP_FLOOR', '8000'))
+                np = max(t['np'], NP_FLOOR)
                 want_json = (t['expects'] == 'json')
                 rec = {'model': m['name'], 'model_lab': m['lab'], 'tier': m['tier'],
                        'task': t['id'], 'cat': t['cat'], 'expects': t['expects'],
