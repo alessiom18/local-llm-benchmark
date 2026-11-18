@@ -91,3 +91,9 @@ python3 live_server.py 8899   # → http://localhost:8899
 
 ## Licenza
 MIT. *SudoWAI — Livorno. AI in locale, senza Big Tech.*
+
+
+## Progetti collegati (SudoWAI)
+- ⚡ **[Interposer](https://interposer.sudowai.com)** — espansione fisica VRAM sulle GPU usate per sbloccare modelli da 30B–120B in locale.
+- 🧠 **[MARINA](https://github.com/alessiom18/marina)** — orchestrazione multi-modello su lavagna condivisa con verificatore.
+- 🌐 **[SudoWAI](https://sudowai.com)** — casa base dei progetti hardware, AI locale e software.
